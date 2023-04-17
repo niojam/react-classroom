@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from "./componets/button/Button";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    const countPlusClicked = () => {
+        console.log("Count + 1 clicked")
+    }
+
+    const countMinusClicked = () => {
+        console.log("Count - 1  clicked")
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo"/>
+                <Button text="Count + 1" onBtnClicked={countPlusClicked}/>
+                <Button text="Count - 1" onBtnClicked={countMinusClicked}/>
+            </header>
+        </div>
+    );
 }
 
 export default App;
