@@ -5,7 +5,9 @@ function ProductList({products}) {
 
     return products.map((product) => {
         return (
-            <ProductCard product={product}></ProductCard>
+            <div className="mt-5">
+                <ProductCard product={product}></ProductCard>
+            </div>
         )
     });
 }

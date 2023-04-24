@@ -4,12 +4,11 @@ import {Button, Card, Col, Row} from "react-bootstrap";
 function ProductCard({product}) {
 
     return (
-        <Card className="mt-5" style={{ width: '18rem' }}>
+        <Card>
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>{product.name}</Card.Title>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    {product.description}
                 </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body>
