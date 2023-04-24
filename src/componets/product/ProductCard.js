@@ -1,14 +1,16 @@
 import React from "react";
 import {Button, Card, Col, Row} from "react-bootstrap";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function ProductCard({product}) {
 
+    const navigate = useNavigate();
+
     const routToEdit = (id) => {
         console.log("sdde");
         console.log(id);
-        redirect("/product/${id}/edit")
+        navigate(`/product/${id}/edit`)
     }
 
     return (
