@@ -4,6 +4,7 @@ import React from "react";
 
 function App() {
 
+    console.log("app")
     return (
         <div>
             <HeaderNav />
